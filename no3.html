@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Man Jao Na!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="15974530976611222974" data-share-method="host" data-aspect-ratio="1.26923" data-width="100%"></div>
+        <h1>Baby Man jao na! 😭</h1>
+        <p>Bhut glt baat hai yrr 🥺</p>
+        <div class="btn">
+            <a href="yes.html">Yes</a>
+            <a href="#" id="move-random">No</a>
+        </div>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <script>
+        const noButton = document.getElementById('move-random');
+        noButton.addEventListener('mouseover', function() {
+            const container = document.querySelector('.container');
+            const rect = container.getBoundingClientRect();
+            
+            const maxX = rect.width - noButton.offsetWidth - 20;
+            const maxY = rect.height - noButton.offsetHeight - 20;
+            
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        });
+    </script>
+</body>
+</html>
+
